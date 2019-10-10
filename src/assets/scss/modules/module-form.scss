@@ -1,0 +1,107 @@
+// Module Form
+
+.modal-wrapper {
+  display: none;
+  width: 100vw;
+  //height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: $robotoFont;
+  font-size: 16px;
+  color: $darkMainColor;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 500;
+}
+
+.modal-window {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: 50px;
+  background: linear-gradient($mainColor, #a8deff);
+  border: 1px solid $darkMainColor;
+  border-radius: 10px;
+  & label {
+    margin-bottom: 5px;
+  }
+  & select, input, textarea {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 25px;
+    font-size: 14px;
+    font-family: $robotoFont;
+    color: $darkMainColor;
+    border-radius: 5px;
+    border: 1px solid $darkMainColor;
+    box-shadow: 0 4px 5px -2px $darkMainColor;
+    outline: none;
+    resize: none;
+  }
+  & textarea {
+    height: 100px;
+  }
+  & .submit-btn {
+    margin: 20px auto 0;
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $robotoFont;
+    background-color: $darkMainColor;
+    border: 1px solid $darkMainColor;
+    box-shadow: 2px 2px 5px -2px $mainColor;
+    color: #fff;
+    cursor: pointer;
+    &:active {
+      background-color: $mainColor;
+      box-shadow: inset 4px 4px 5px -2px $darkMainColor;
+    }
+  }
+}
+
+.close-form {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+  background-color: $darkMainColor;
+  box-shadow: 1px 1px 7px 1px $mainColor;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  //&:hover {
+  //  transition: all 1s linear;
+  //  transform: rotateX(360deg);
+  //  transform-style: preserve-3d;
+  //
+  //}
+  &::before {
+    content: '';
+    width: 80%;
+    height: 3px;
+    background-color: $minorColor;
+    position: absolute;
+    top: 13px;
+    left: 2.5px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: '';
+    width: 80%;
+    height: 3px;
+    background-color: $minorColor;
+    position: absolute;
+    top: 13px;
+    left: 2.5px;
+    transform: rotate(-45deg);
+  }
+}

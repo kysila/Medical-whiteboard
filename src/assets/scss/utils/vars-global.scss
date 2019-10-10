@@ -1,0 +1,32 @@
+// Font
+$robotoFont             : 'Roboto', sans-serif;
+
+// Width
+$smallWidth             : 481px;
+$mediumWidth            : 993px;
+$largeWidth             : 1200px;
+
+// Colors
+$mainTextColor          : #C5C5C5;
+$accentTextColor        : #7E7F7F;
+$darkMainColor          : #5A7C8F;
+$mainColor              : #8ab6d1;
+$basicColor             : #5CD0CF;
+$secondaryColor         : #8BE0E0;
+$minorColor             : #D5ECEC;
+$whiteColor             : #FEFEFE;
+
+// Body style
+body {
+  font-family: $robotoFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
+button {
+  outline: none;
+}

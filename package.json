@@ -1,0 +1,66 @@
+{
+  "name": "step-project-forkio",
+  "version": "1.0.0",
+  "description": "Step Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "dev-tyoma": "webpack-dev-server --open --config ./build/webpack.dev.conf.js --host 192.168.1.3",
+    "dev-petro": "webpack-dev-server --open --config ./build/webpack.dev.conf.js --host 192.168.1.108",
+    "build": "webpack --config ./build/webpack.build.conf.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "author": "petro.velykyi@gmail.com, tyoma.ksl@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://petro_velykyi@bitbucket.org/dan-it_team/step-project-oop.git"
+  },
+  "bugs": {
+    "url": "https://"
+  },
+  "keywords": [
+    "webpack",
+    "webpack4",
+    "merge",
+    "bable",
+    "bable7",
+    "scss"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.4",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.0.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "reset-css": "^4.0.1",
+    "uuid": "^3.3.2"
+  }
+}

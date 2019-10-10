@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,900&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <title>Step project OOP</title>
+</head>
+<body>
+
+<div class="window-loader">
+  <div class="animation"></div>
+</div>
+
+<main class="main">
+  <nav id="navbar" class="navbar">
+      <a href="#" class="navbar__logo"></a>
+      <button class="navbar__btn">Записаться к врачу</button>
+  </nav>
+  <section class="board">
+    <!--Template-->
+    <template id="visit-template">
+      <div class="visit">
+        <div class="visit-before"></div>
+        <button class="btn btn--delete">Удалить</button>
+        <div class="input-field common">
+          <label for="full-name">ФИО:</label>
+          <input id="full-name" type="text" class="global" name="fullName" readonly>
+        </div>
+        <div class="input-field common">
+          <label for="visit-name">Визит к врачу:</label>
+          <input id="visit-name" type="text" class="global" name="visitName" readonly>
+        </div>
+        <div class="input-field common hidden">
+          <label for="visit-date">Дата визита:</label>
+          <input id="visit-date" type="text" class="global" name="visitDate" readonly>
+        </div>
+        <div class="input-field common hidden">
+          <label for="purpose">Цель визита:</label>
+          <input id="purpose" type="text" class="global" name="purpose" readonly>
+        </div>
+        <div class="input-field common hidden">
+          <label for="comments">Комментарии:</label>
+          <textarea id="comments" class="global" name="comments" readonly></textarea>
+        </div>
+
+        <!-- Cardiologist-->
+        <div class="input-field cardiologist hidden">
+          <label for="pressure">Давление:</label>
+          <input id="pressure" type="text" class="cardiologist" name="pressure" readonly>
+        </div>
+        <div class="input-field cardiologist hidden">
+          <label for="body-mass-index">Индекс массы тела:</label>
+          <input id="body-mass-index" type="text" class="cardiologist" name="bodyMassIndex" readonly>
+        </div>
+        <div class="input-field cardiologist hidden">
+          <label for="cvs-diseases">Перенесенные заболевания ССС:</label>
+          <textarea id="cvs-diseases" class="cardiologist" name="cvsDiseases" readonly></textarea>
+        </div>
+
+        <!--  Dentist-->
+        <div class="input-field dentist hidden">
+          <label for="last-visit-date">Дата последнего визита:</label>
+          <input id="last-visit-date" type="text" class="dentist" name="lastVisitDate" readonly>
+        </div>
+
+        <div class="input-field common hidden">
+          <label for="age">Возраст:</label>
+          <input id="age" type="text" class="global" name="age" readonly>
+        </div>
+        <button class="btn btn--show-more">Показать больше</button>
+      </div>
+    </template>
+  </section>
+
+  <section class="modal-wrapper">
+    <button class="close-form"></button>
+    <form class="modal-window" action="#" method="GET">
+      <label for="visits">
+        Выберите врача:
+        <br>
+      </label>
+      <select class="global" name="visitName" id="visits" required>
+        <option value="cardiologist">Кардиолог</option>
+        <option value="dentist">Стоматолог</option>
+        <option value="therapist">Терапевт</option>
+      </select>
+      <label>
+        Фамилия:
+        <br>
+        <input type="text" class="global" name="lastName" required value="Великий">
+      </label>
+      <label>
+        Имя:
+        <br>
+        <input type="text" class="global" name="firstName" required value="Петр">
+      </label>
+      <label>
+        Отчество:
+        <br>
+        <input type="text" class="global" name="secondName" required value="Николаевич">
+      </label>
+      <label>
+        Выберите дату визита:
+        <br>
+        <input type="date" class="global" name="visitDate" required value="2019-10-10">
+      </label>
+      <label>
+        Цель визита:
+        <br>
+        <input type="text" class="global" name="purpose" required value="Обследование">
+      </label>
+      <label>
+        Ваши комментарии:
+        <br>
+        <textarea id="" class="global" maxlength="400"
+                  placeholder="Максимум 400 символов..."
+                  name="comments" required>Комментарии</textarea>
+      </label>
+      <div class="doctor cardiologist">
+        <label>
+          Давление:
+          <br>
+          <input type="text" name="pressure" required value="120/80">
+        </label>
+        <label>
+          Индекс массы тела:
+          <br>
+          <input type="text" name="bodyMassIndex" required value="20">
+        </label>
+        <label>
+          Перенесенные заболевания ССС:
+          <br>
+          <input type="text" name="cvsDiseases" required value="Нет">
+        </label>
+        <label>
+          Возраст:
+          <br>
+          <input type="text" name="age" required value="18">
+        </label>
+      </div>
+      <div class="doctor dentist" hidden>
+        <label>
+          Дата последнего визита:
+          <br>
+          <input type="text" name="lastVisitDate" value="2019-01-10">
+        </label>
+        <label>
+          Возраст:
+          <br>
+          <input type="text" name="age" value="18">
+        </label>
+      </div>
+      <div class="doctor therapist" hidden>
+        <label>
+          Возраст:
+          <br>
+          <input type="text" name="age" value="18">
+        </label>
+      </div>
+
+
+      <button type="submit" class="submit-btn">Записаться</button>
+    </form>
+  </section>
+
+</main>
+
+</body>
+</html>
